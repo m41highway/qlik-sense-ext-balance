@@ -81,7 +81,8 @@ define(["./balance", "./d3.min", "css!./QSenseBalance.css"],
         
         var bal = balance(div, width, height, 
           [0, 0, 1, 1, 0, 1, 0],
-          ["Advice", "Waiting Time", "Service", "Explanation", "Atmosphere", "Welcome", "Farewell"]
+          ["Advice", "Waiting Time", "Service", "Explanation", "Atmosphere", "Welcome", "Farewell"],
+          3.8
         )
           .setBg("cyan")
           .setPivotColor("red")

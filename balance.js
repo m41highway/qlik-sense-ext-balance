@@ -26,7 +26,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 		
 
  */
-function balance(parent, width, height, arraySide, arrayLabel) {
+function balance(parent, width, height, arraySide, arrayLabel, inputNumber) {
 
 
 var _data = null,
@@ -302,6 +302,24 @@ var _data = null,
       .text(average);
   }
 
+  /**
+   * Display number at the pivot
+   */
+  var displayNumber = function (svgContainer, input) {
+    var X = getCenter().X;
+    var Y = getCenter().Y;
+    var verticalDisplacement = 50 * zoomRatio;
+    var horizontalDisplayment = 15 * zoomRatio;
+
+    svgContainer.append("svg:text")
+      .attr("x", X - horizontalDisplayment)
+      .attr("y", Y + verticalDisplacement)
+      .attr("font-family", fontFamily)
+      .attr("font-size", fontSize)
+      .attr("fill", fontColor)
+      .text(input);
+  }
+
   _selection = d3.select(parent);
 
   function component() {
@@ -331,7 +349,8 @@ var _data = null,
 
       drawLabels(group);
 
-      displayAverage(svg, boxes);
+      //displayAverage(svg, boxes);
+      displayNumber(svg, inputNumber);
 
     });
 
