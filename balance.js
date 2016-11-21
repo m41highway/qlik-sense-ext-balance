@@ -112,7 +112,7 @@ var _data = null,
     H = height;
     boxWidth = W * 6 / 25;
     boxHeight = H / 10;
-    fontSize = H / 25 + "px";
+    fontSize = fontSize | H / 25 + "px";
     zoomRatio = 1 * W / 500;
     labelInden = 60 * zoomRatio;
     textDisplacement = 20 * zoomRatio;
@@ -384,6 +384,32 @@ var _data = null,
       wordColor = definition;
 
       return component;
+  }
+
+  /**
+   * configure level color
+   */
+  component.setLevelColor = function (color) {
+    levelColor = color;
+
+    return component;
+  }
+
+  /**
+   * configure font color
+   */
+  component.setFontColor = function (color) {
+    fontColor = color;
+
+    return component;
+  }
+
+  /**
+   * configure font size
+   */
+  component.setFontSize = function(size) {
+    fontSize = size + "px";
+    return component;
   }
 
   component.render = function () {

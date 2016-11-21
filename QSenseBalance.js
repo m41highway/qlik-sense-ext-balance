@@ -86,7 +86,10 @@ define(["./balance", "./d3.min", "css!./QSenseBalance.css"],
           .setBg("cyan")
           .setPivotColor("red")
           .setPivotLineColor("blue") 
-          .setInclination("5")   
+          .setInclination("5")
+          .setLevelColor("yellow")
+          .setFontColor("grey")
+          .setFontSize(22)   
           .setWordColor(
                 [  
                     {"label": "Advice", "color": "orange"},
