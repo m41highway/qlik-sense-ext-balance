@@ -81,8 +81,9 @@ var _data = null,
   var boxHeight = H / 10;
   var space = boxWidth / 2; // the space remaining on each side of the level
   var zoomRatio = 1 * W / 500;
+  var hZoomRatio = 1 * H / 500;
   var labelInden = 60 * zoomRatio;
-  var textDisplacement = 20 * zoomRatio;
+  var textDisplacement = 20 * hZoomRatio;
   var fontFamily = "sans-serif";
   var fontSize = H / 25 + "px";  //"20px"
   var fontColor = "black";
@@ -114,8 +115,10 @@ var _data = null,
     boxHeight = H / 10;
     fontSize = fontSize | H / 25 + "px";
     zoomRatio = 1 * W / 500;
+    hZoomRatio = 1 * H /500;
     labelInden = 60 * zoomRatio;
-    textDisplacement = 20 * zoomRatio;
+    //textDisplacement = 20 * zoomRatio;
+    textDisplacement = 20 * hZoomRatio;
 
     return this;
   }
