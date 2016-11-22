@@ -297,7 +297,7 @@ var _data = null,
     }).length) / 2    
 
     svgContainer.append("svg:text")
-      .attr("x", X - horizontalDisplayment)
+      .attr("x", X )
       .attr("y", Y + verticalDisplacement)
       .attr("font-family", fontFamily)
       .attr("font-size", fontSize)
@@ -315,11 +315,12 @@ var _data = null,
     var horizontalDisplayment = 10 * zoomRatio;
 	
     svgContainer.append("svg:text")
-      .attr("x", X - horizontalDisplayment)	  
+	    .attr("x", X )
       .attr("y", Y + verticalDisplacement)	  
       .attr("font-family", fontFamily)
       .attr("font-size", fontSize)
       .attr("fill", fontColor)
+	  .attr("text-anchor", "middle")
       .text(input);
   }
 
