@@ -82,15 +82,15 @@ define(["./balance", "./d3.min", "css!./QSenseBalance.css"],
         var bal = balance(div, width, height, 
           [0, 0, 1, 1, 0, 1, 0],
           ["Advice", "Waiting Time", "Service", "Explanation", "Atmosphere", "Welcome", "Farewell"],
-          3.8
+          4.1
         )
           .setBg("cyan")
-          .setPivotColor("red")
+          .setPivotColor("green")
           .setPivotLineColor("blue") 
           .setInclination("5")
           .setLevelColor("yellow")
           .setFontColor("grey")
-          .setFontSize(22)   
+          .setFontSize(18)   
           .setWordColor(
                 [  
                     {"label": "Advice", "color": "orange"},

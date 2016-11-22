@@ -81,9 +81,9 @@ var _data = null,
   var boxHeight = H / 10;
   var space = boxWidth / 2; // the space remaining on each side of the level
   var zoomRatio = 1 * W / 500;
-  var hZoomRatio = 1 * H / 500;
+  var vZoomRatio = 1 * H / 500;
   var labelInden = 60 * zoomRatio;
-  var textDisplacement = 20 * hZoomRatio;
+  var textDisplacement = 20 * vZoomRatio;
   var fontFamily = "sans-serif";
   var fontSize = H / 25 + "px";  //"20px"
   var fontColor = "black";
@@ -115,10 +115,10 @@ var _data = null,
     boxHeight = H / 10;
     fontSize = fontSize | H / 25 + "px";
     zoomRatio = 1 * W / 500;
-    hZoomRatio = 1 * H /500;
+    vZoomRatio = 1 * H /500;
     labelInden = 60 * zoomRatio;
     //textDisplacement = 20 * zoomRatio;
-    textDisplacement = 20 * hZoomRatio;
+    textDisplacement = 20 * vZoomRatio;
 
     return this;
   }
@@ -288,13 +288,13 @@ var _data = null,
   var displayAverage = function (svgContainer, boxes) {
     var X = getCenter().X;
     var Y = getCenter().Y;
-    var verticalDisplacement = 50 * zoomRatio;
-    var horizontalDisplayment = 15 * zoomRatio;
+    var verticalDisplacement = 80 * zoomRatio;
+    var horizontalDisplayment = 10 * vZoomRatio;
     var average = (boxes.filter(function (d) {
       return d.side === 0
     }).length + boxes.filter(function (d) {
       return d.side === 1
-    }).length) / 2
+    }).length) / 2    
 
     svgContainer.append("svg:text")
       .attr("x", X - horizontalDisplayment)
@@ -311,12 +311,12 @@ var _data = null,
   var displayNumber = function (svgContainer, input) {
     var X = getCenter().X;
     var Y = getCenter().Y;
-    var verticalDisplacement = 50 * zoomRatio;
-    var horizontalDisplayment = 15 * zoomRatio;
-
+    var verticalDisplacement = 70 * vZoomRatio;
+    var horizontalDisplayment = 10 * zoomRatio;
+	
     svgContainer.append("svg:text")
-      .attr("x", X - horizontalDisplayment)
-      .attr("y", Y + verticalDisplacement)
+      .attr("x", X - horizontalDisplayment)	  
+      .attr("y", Y + verticalDisplacement)	  
       .attr("font-family", fontFamily)
       .attr("font-size", fontSize)
       .attr("fill", fontColor)
